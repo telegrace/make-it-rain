@@ -19,9 +19,9 @@
       <div id="dollar">💵</div>
       <div id="coin">🪙</div>
     </div>
-    <!-- <div class="stage">
-      <div class="box bounce"></div>
-    </div> -->
+    <div class="stage">
+      <!-- <div class="box bounce"></div> -->
+    </div>
   </body>
   <script src="/socket.io/socket.io.js"></script>
   <script src="index.js"></script>
@@ -29,7 +29,6 @@
   <script>
     const availableEmojis = ["💸", "🤑", "💰", "💵", "🪙"];
     const socket = io();
-    const moneyBox = document.querySelector(".money-box");
     document
       .getElementsByClassName("money-box")[0]
       .addEventListener("click", (event) => {
@@ -38,9 +37,10 @@
           socket.emit("chat message", event.target.innerText);
         }
       });
+    const stage = document.querySelector(".stage");
 
     socket.on("chat message", function (msg) {
-      var item = document.createElement("p");
+      let item = document.createElement("p");
       item.textContent = msg;
       stage.appendChild(item);
     });
