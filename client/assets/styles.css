@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+@font-face {
+  font-family: "agrandir";
+  src: url("client/assets/fonts/Agrandir-Regular.otf");
+}
+
+body {
+  text-align: center;
+  background-color: black;
+  color: #00d54b;
+  font-size: 2em;
+  font-family: "agrandir", Courier, monospace;
+}
+
+.ticker {
+  overflow: hidden;
+  background-color: #00d54b;
+  color: black;
+}
+
+.money-box {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+}
+
+.stage {
+  display: flex;
+  height: 70%;
+  width: 100%;
+  border: white 1px solid;
+}
+.box {
+  align-self: flex-end;
+  animation-duration: 2s;
+  background-color: #f44336;
+  height: 200px;
+  margin: 0 auto 0 auto;
+  transform-origin: bottom;
+  width: 200px;
+  font-size: 5em;
+}
+
+.bounce-a {
+  animation-name: bounce-a;
+  animation-timing-function: ease;
+}
+
+@keyframes bounce-a {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-300px);
+  }
+  50% {
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+}
