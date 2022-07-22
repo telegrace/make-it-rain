@@ -9,7 +9,7 @@
 }
 @font-face {
   font-family: "agrandir";
-  src: url("client/assets/fonts/Agrandir-Regular.otf");
+  src: url("fonts/Agrandir-Regular.otf");
 }
 
 body {
@@ -33,40 +33,32 @@ body {
 }
 
 .stage {
-  display: flex;
-  height: 70vh;
   width: 100%;
+  height: 100%;
+  /* left: 0; */
+  z-index: 1;
 }
+
 p {
-  align-self: flex-end;
+  position: fixed;
+  top: 0;
+  visibility: hidden;
   animation-duration: 2s;
-  height: 200px;
-  margin: 0 auto 0 auto;
-  transform-origin: bottom;
-  width: 200px;
   font-size: 5em;
-  animation-name: bounce;
+  animation-name: fall;
   animation-timing-function: ease;
 }
 
-/* .bounce {
-  animation-name: bounce;
-  animation-timing-function: ease;
-} */
-
-@keyframes bounce {
+@keyframes fall {
   0% {
-    transform: scale(1, 1) translateY(0);
-  }
-  10% {
+    visibility: visible;
     transform: scale(1.1, 0.9) translateY(0);
   }
-  30% {
-    transform: scale(0.9, 1.1) translateY(-300px);
-  }
-  50% {
-    transform: scale(1.05, 0.95) translateY(0);
-  }
   70% {
+    visibility: visible;
+    transform: scale(1.05, 0.95) translateY(90vh);
+  }
+  100% {
+    opacity: 0;
   }
 }
