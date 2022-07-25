@@ -1,6 +1,6 @@
 # Make It Rain
 
-<img src="https://github.com/telegrace/make-it-rain/blob/main/client/assets/styles.css/telegrace-make-it-rain.gif" width=50% height=50% alt="Demo GIF of Make-It-Rain Website" >
+<img src="https://github.com/telegrace/make-it-rain/blob/main/client/assets/styles.css/telegrace-make-it-rain.gif" width=50% height=50% alt="Demo GIF of Make-It-Rain Website" />
 
 Visit the website [Make It Rain](https://make-it-rain.telegrace.repl.co/).
 
