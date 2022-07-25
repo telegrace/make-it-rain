@@ -21,6 +21,10 @@ body {
   font-size: 2em;
   font-family: "agrandir", Courier, monospace;
   overflow: hidden;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 h1 {
@@ -33,6 +37,7 @@ h1 {
   display: flex;
   justify-content: space-around;
   padding: 50px;
+  font-size: 3em;
 }
 
 .stage {
