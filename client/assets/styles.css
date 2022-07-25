@@ -7,23 +7,26 @@
 * {
   margin: 0;
 }
+
 @font-face {
   font-family: "agrandir";
-  src: url("fonts/Agrandir-Regular.otf");
+  src: url("fonts/Agrandir-GrandHeavy.otf");
 }
 
 body {
+  padding: 1em;
   text-align: center;
   background-color: black;
-  color: #00d54b;
+  color: white;
   font-size: 2em;
   font-family: "agrandir", Courier, monospace;
+  overflow: hidden;
 }
 
-.ticker {
-  overflow: hidden;
-  background-color: #00d54b;
-  color: black;
+h1 {
+  animation-name: horizontal-shaking;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 
 .money-box {
@@ -35,13 +38,12 @@ body {
 .stage {
   width: 100%;
   height: 100%;
-  /* left: 0; */
   z-index: 1;
 }
 
 p {
   position: fixed;
-  top: 0;
+  top: 50px;
   visibility: hidden;
   animation-duration: 2s;
   font-size: 5em;
@@ -62,3 +64,82 @@ p {
     opacity: 0;
   }
 }
+
+.rotate {
+  animation: rotation 60s;
+}
+
+.linear {
+  animation-timing-function: linear;
+}
+
+.infinite {
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+#background-container {
+  position: absolute;
+  z-index: -10;
+}
+
+footer {
+  position: absolute;
+  bottom: 1em;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: white;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  font-size: 0.5em;
+  padding: 12px 15px 10px 15px;
+  border-radius: 50% 0 0 50%;
+  background-color: #00d54b;
+  border-radius: 50px;
+}
+
+@keyframes horizontal-shaking {
+  0% {
+    transform: translateX(xp);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/* 
+@media screen and (min-width: 992px) {
+  
+} */
