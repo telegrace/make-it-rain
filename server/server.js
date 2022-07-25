@@ -25,11 +25,13 @@ app.get("/current-users", (req, res) => {
 
 io.on("connection", (socket) => {
   currentUsers++;
+  io.emit("current-users", currentUsers);
   socket.on("disconnect", () => {
     currentUsers--;
+    io.emit("current-users", currentUsers);
   });
-  socket.on("chat message", (msg) => {
-    io.emit("chat message", msg);
+  socket.on("emoji-click", (emoji) => {
+    io.emit("emoji-click", emoji);
   });
 });
 
