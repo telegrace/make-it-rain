@@ -1,4 +1,16 @@
-# make-it-rain
+# Make It Rain
+
+![Demo GIF of Website](url "/client/assets/telegrace-make-it-rain.gif")
+
+Visit the website [Make It Rain](https://make-it-rain.telegrace.repl.co/).
+
+It's more fun if there are other users making it rain at the same time.
+
+### Concept
+
+Simple express and socket.io demo to **rain** money emojis on other users' screen.
+
+# Run in locally
 
 `git clone git@github.com:telegrace/make-it-rain.git`
 
@@ -6,4 +18,8 @@
 
 `npm run start`
 
-Make it rain with other users in real time with sockets and express.
+# Future plans 🚀
+
+- add a tutorial
+- add current users online
+- enable customisation for the users
