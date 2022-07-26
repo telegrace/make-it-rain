@@ -1,0 +1,26 @@
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 1em;
+  }
+
+  .money-box {
+    padding: 10px;
+    font-size: 2 em;
+  }
+  p {
+    font-size: 3em;
+  }
+
+  ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  li {
+    margin: 10px;
+    font-size: 0.75em;
+    padding: 8px 12px 8px 12px;
+    background-color: #00d54b;
+    border-radius: 20px;
+  }
+}
