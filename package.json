@@ -2,15 +2,17 @@
   "name": "socket-emojis",
   "version": "1.0.0",
   "description": "send emojis",
-  "main": "./server/server.js",
+  "main": "./server/koa-server.js",
   "scripts": {
-    "start": "node ./server/server.js",
+    "start": "node ./server/koa-server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.1",
+    "koa": "^2.13.4",
+    "koa-static": "^5.0.0",
     "socket.io": "^4.5.1"
   }
 }
